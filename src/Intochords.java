@@ -6,15 +6,15 @@ public class Intochords {
     public static void main(String[] args) {
         String[][] notesBoard = new String[4][4];
 
-        int noteIndex = random.nextInt(notes.length);
+        int randomNote = random.nextInt(notes.length);
 
         for (int i = 0; i < notesBoard.length; i++) {
             for (int j = 0; j < notesBoard[i].length; j++) {
                 if (i == j) {
-                    if (notes[noteIndex].length() == 1) {
-                        notesBoard[i][j] = notes[noteIndex] + " ";
+                    if (notes[randomNote].length() == 1) {
+                        notesBoard[i][j] = notes[randomNote] + " ";
                     } else {
-                        notesBoard[i][j] = notes[noteIndex];
+                        notesBoard[i][j] = notes[randomNote];
                     }
                 } else {
                     notesBoard[i][j] = "__";
