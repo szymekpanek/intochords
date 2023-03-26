@@ -1,5 +1,5 @@
 # Intochords
- Zasady gry:  
+## Zasady gry:  
 
  W przekatna macierzy 3x3 wpisujemy jeden dzwiek z 12  
  Zadaniem gracza jest dopisanie pozostałych dzwieków do macierzy tak aby powstały kolejne akordy  
