@@ -4,7 +4,9 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Intochords {
+
     static String[] noteslist = {"C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "B", "H"};
+
 
     private static void printboard(String[][] board) {
         for (String[] column : board) {
@@ -15,7 +17,7 @@ public class Intochords {
         }
     }
 
-    private static void fill_the_board(String[][] board) {
+    private static void Board(String[][] board) {
         Random random = new Random();
         Scanner scan = new Scanner(System.in);
         int randomNote = random.nextInt(noteslist.length);
@@ -38,7 +40,7 @@ public class Intochords {
         System.out.println("\n");
         // first row answers
 
-        boolean first_check, seckond_check;
+        boolean first_check, second_check;
         System.out.println("Podaj dzwięk [1][2]: ");
         String first_answer = scan.nextLine();
         if (first_answer.equals(noteslist[(randomNote + 4) % 12])) {
@@ -49,20 +51,20 @@ public class Intochords {
 
         System.out.println("Podaj dzwięk [1][3]: ");
 
-        String seckond_answer = scan.nextLine();
-        if (seckond_answer.equals(noteslist[(randomNote + 7) % 12])) {
-            seckond_check = true;
+        String second_answer = scan.nextLine();
+        if (second_answer.equals(noteslist[(randomNote + 7) % 12])) {
+            second_check = true;
         } else {
-            seckond_check = false;
+            second_check = false;
         }
 
-        if (first_check && seckond_check) {
-            System.out.println("Powstał akord " + noteslist[randomNote] + "," + first_answer + "," + seckond_answer + "\n");
+        if (first_check && second_check) {
+            System.out.println("Gratulacje akord " + noteslist[randomNote] + "," + first_answer + "," + second_answer + "\nczyli " + noteslist[randomNote] +" dur \n");
         } else System.out.println("Podane dzwięki nie tworza akordu!");
     }
 
     public static void main(String[] args) {
         String[][] notesBoard = new String[3][3];
-        fill_the_board(notesBoard);
+        Board(notesBoard);
     }
 }
